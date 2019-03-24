@@ -78,11 +78,9 @@ mgr.createbackup('backup1') #call the backup function and pass the name of
 
 Hello Mr. Bombal,
 
-GNS3 Certificate, could you please give me a code because I want to become GNS3 certified
-
-Thank you, looking forward to receive an email with my code.
+Thank you for your time and for teaching us the basics with python and gns3/networking. I would like to take my GNS3 exam and become certified because GNS3 is a great tool for those who want to begin studying and don't have a place to start such as buying real hardware.
 
 Kind regards,
-Brandon
+Brendan
 
 '''

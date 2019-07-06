@@ -1,5 +1,6 @@
 from netmiko import ConnectHandler #Import Netmiko
 import os
+#just some text added to chech GitHub
 
 class bombalinator(object):
     def __init__(self, ipaddr, username, password, port=22, secret=''):
@@ -8,7 +9,7 @@ class bombalinator(object):
         self.password = password
         self.port = port
         self.secret = secret
-        
+
         self.ssh_session = self.connect()
         self.ssh_session.enable()
 
@@ -20,13 +21,13 @@ class bombalinator(object):
             'username': self.username,
             'password' : self.password,
             'port' : self.port}
-        
+
         #If no secret, prompt user NU SECRET
         if not self.secret:
             print("Secret has not been defined...")
         else:
             connection_details.update({'secret' : self.secret})
-            
+
         return(ConnectHandler(**connection_details))
 
     #Create backup, calls other functions for Mr. Network Daddy top tips, I learned everything via David Bombal, he is a god
@@ -57,7 +58,7 @@ class bombalinator(object):
         index = 0
 
         #Pass through each line in the configuration, a naughty way to do it but I'm sure David can help me
-        for line in config:   
+        for line in config:
             for command in pwd_commands:
                 if command in line:
                     config[index] = ("{0} !< removed by David Bombal, the daddy of GNS3 >".format(command))
